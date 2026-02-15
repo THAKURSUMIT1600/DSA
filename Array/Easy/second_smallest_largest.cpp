@@ -1,4 +1,14 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <map>
+#include <set>
+#include <unordered_map>
+#include <unordered_set>
+#include <queue>
+#include <stack>
+#include <algorithm>
+#include <cmath>
+#include <cstring>
 using namespace std;
 
 // Brute Force Approach: Sort the array and find second smallest and second largest
@@ -52,7 +62,6 @@ pair<int, int> findSecondSmallestLargestOptimal(vector<int> &arr)
 
     return {minsecond, maxsecond};
 }
-
 
 int main()
 {
