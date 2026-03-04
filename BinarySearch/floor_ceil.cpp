@@ -85,3 +85,5 @@ int main()
     cout << "Ceil Index :" << optimalAns.second << " Ceil Value :" << arr[optimalAns.second];
     return 0;
 }
+
+// commit-marker: 2026-03-04
