@@ -12,12 +12,14 @@ Space Complexity: O(log n) due to recursive stack space.
 */
 
 // Hoare Partition
-int partition(vector<int>& arr, int low, int high) {
-    int pivot = arr[low];      // pivot = first element of subarray
+int partition(vector<int> &arr, int low, int high)
+{
+    int pivot = arr[low]; // pivot = first element of subarray
     int start = low;
     int end = high;
 
-    while (start < end) {
+    while (start < end)
+    {
         while (start <= high && arr[start] <= pivot)
             start++;
 
@@ -28,20 +30,23 @@ int partition(vector<int>& arr, int low, int high) {
             swap(arr[start], arr[end]);
     }
 
-    swap(arr[low], arr[end]);  // place pivot in correct position
-    return end;                // return pivot index
+    swap(arr[low], arr[end]); // place pivot in correct position
+    return end;               // return pivot index
 }
 
 // Quick Sort
-void quicksort(vector<int>& arr, int low, int high) {
-    if (low < high) {
+void quicksort(vector<int> &arr, int low, int high)
+{
+    if (low < high)
+    {
         int p = partition(arr, low, high);
         quicksort(arr, low, p - 1);
         quicksort(arr, p + 1, high);
     }
 }
 
-int main() {
+int main()
+{
     cout << "Welcome to Quick Sort Program\n";
 
     vector<int> arr;
@@ -51,7 +56,8 @@ int main() {
     cin >> n;
 
     cout << "Enter the Array Elements:\n";
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         int value;
         cout << "Enter element " << i << ": ";
         cin >> value;
